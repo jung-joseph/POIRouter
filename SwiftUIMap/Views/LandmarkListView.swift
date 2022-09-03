@@ -11,6 +11,7 @@ import MapKit
 struct LandmarkListView: View {
     
     @EnvironmentObject var localSearchService: LocalSearchService
+    @Binding var showLandmarksSheet: Bool
     
     var body: some View {
         VStack{
@@ -25,8 +26,9 @@ struct LandmarkListView: View {
                 .onTapGesture {
                     localSearchService.landmark = landmark
                     withAnimation {
-                    localSearchService.region = MKCoordinateRegion.regionFromLandmark(landmark)
+                        localSearchService.region = MKCoordinateRegion.regionFromLandmark(landmark)
                     }
+                    showLandmarksSheet.toggle()
                 }
                 
             }
@@ -36,6 +38,6 @@ struct LandmarkListView: View {
 
 struct LandmarkListView_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkListView().environmentObject(LocalSearchService())
+        LandmarkListView(showLandmarksSheet: .constant(false)).environmentObject(LocalSearchService())
     }
 }

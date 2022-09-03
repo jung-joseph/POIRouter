@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		536FFAF628C37927000231BE /* Formatters in Resources */ = {isa = PBXBuildFile; fileRef = 536FFAF528C37927000231BE /* Formatters */; };
 		53DAFE692896C22700F9E069 /* SwiftUIMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DAFE682896C22700F9E069 /* SwiftUIMapApp.swift */; };
 		53DAFE6B2896C22700F9E069 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DAFE6A2896C22700F9E069 /* ContentView.swift */; };
 		53DAFE6D2896C22C00F9E069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53DAFE6C2896C22C00F9E069 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		536FFAF528C37927000231BE /* Formatters */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Formatters; sourceTree = "<group>"; };
 		53DAFE652896C22700F9E069 /* SwiftUIMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DAFE682896C22700F9E069 /* SwiftUIMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIMapApp.swift; sourceTree = "<group>"; };
 		53DAFE6A2896C22700F9E069 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,13 +63,13 @@
 		53DAFE672896C22700F9E069 /* SwiftUIMap */ = {
 			isa = PBXGroup;
 			children = (
+				53DAFE682896C22700F9E069 /* SwiftUIMapApp.swift */,
 				53DAFE822897260A00F9E069 /* Views */,
 				53DAFE7F28971EA900F9E069 /* Models */,
 				53DAFE7A28970E8800F9E069 /* Extensions */,
 				53DAFE772896C2F000F9E069 /* Managers */,
-				53DAFE682896C22700F9E069 /* SwiftUIMapApp.swift */,
+				536FFAF528C37927000231BE /* Formatters */,
 				53DAFE762896C26200F9E069 /* Services */,
-				53DAFE6A2896C22700F9E069 /* ContentView.swift */,
 				53DAFE6C2896C22C00F9E069 /* Assets.xcassets */,
 				53DAFE6E2896C22C00F9E069 /* Preview Content */,
 			);
@@ -117,6 +119,7 @@
 		53DAFE822897260A00F9E069 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				53DAFE6A2896C22700F9E069 /* ContentView.swift */,
 				53DAFE832897262A00F9E069 /* LandmarkListView.swift */,
 			);
 			path = Views;
@@ -180,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				536FFAF628C37927000231BE /* Formatters in Resources */,
 				53DAFE702896C22C00F9E069 /* Preview Assets.xcassets in Resources */,
 				53DAFE6D2896C22C00F9E069 /* Assets.xcassets in Resources */,
 			);
@@ -337,6 +341,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -368,6 +373,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
