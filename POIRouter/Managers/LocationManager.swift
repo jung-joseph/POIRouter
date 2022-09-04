@@ -13,15 +13,17 @@ class LocationManager: NSObject, ObservableObject {
     
     let locationManager = CLLocationManager()
     @Published var region = MKCoordinateRegion.defaultRegion()
+    @Published var location: CLLocation?
     
     
     override init() {
         super.init()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = kCLDistanceFilterNone
+        locationManager.startUpdatingLocation()
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
-        locationManager.requestLocation()
+//        locationManager.requestLocation()
     }
 }
 
@@ -52,9 +54,10 @@ extension LocationManager: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else {return}
-        
+        guard let location = locations.first else {return}
+
         DispatchQueue.main.async { [weak self] in
+            self?.location = location
             self?.region = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.25, longitudeDelta: 0.25))
         }
     }

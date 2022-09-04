@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		536FFAF628C37927000231BE /* Formatters in Resources */ = {isa = PBXBuildFile; fileRef = 536FFAF528C37927000231BE /* Formatters */; };
+		536FFB1228C3DD5B000231BE /* PreferencesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536FFB1128C3DD5B000231BE /* PreferencesScreen.swift */; };
+		536FFB1428C3DD9A000231BE /* DistanceUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536FFB1328C3DD9A000231BE /* DistanceUnit.swift */; };
+		536FFB1628C3FB11000231BE /* DistanceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536FFB1528C3FB11000231BE /* DistanceFormatter.swift */; };
+		536FFB1A28C40077000231BE /* Measurement+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536FFB1928C40077000231BE /* Measurement+Extensions.swift */; };
 		53DAFE692896C22700F9E069 /* POIRouterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DAFE682896C22700F9E069 /* POIRouterApp.swift */; };
 		53DAFE6B2896C22700F9E069 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DAFE6A2896C22700F9E069 /* ContentView.swift */; };
 		53DAFE6D2896C22C00F9E069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53DAFE6C2896C22C00F9E069 /* Assets.xcassets */; };
@@ -20,7 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		536FFAF528C37927000231BE /* Formatters */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Formatters; sourceTree = "<group>"; };
+		536FFB1128C3DD5B000231BE /* PreferencesScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesScreen.swift; sourceTree = "<group>"; };
+		536FFB1328C3DD9A000231BE /* DistanceUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceUnit.swift; sourceTree = "<group>"; };
+		536FFB1528C3FB11000231BE /* DistanceFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceFormatter.swift; sourceTree = "<group>"; };
+		536FFB1928C40077000231BE /* Measurement+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Measurement+Extensions.swift"; sourceTree = "<group>"; };
 		53DAFE652896C22700F9E069 /* POIRouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POIRouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DAFE682896C22700F9E069 /* POIRouterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIRouterApp.swift; sourceTree = "<group>"; };
 		53DAFE6A2896C22700F9E069 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +50,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		536FFB1728C3FB34000231BE /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				536FFB1528C3FB11000231BE /* DistanceFormatter.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
 		53DAFE5C2896C22700F9E069 = {
 			isa = PBXGroup;
 			children = (
@@ -68,7 +82,7 @@
 				53DAFE7F28971EA900F9E069 /* Models */,
 				53DAFE7A28970E8800F9E069 /* Extensions */,
 				53DAFE772896C2F000F9E069 /* Managers */,
-				536FFAF528C37927000231BE /* Formatters */,
+				536FFB1728C3FB34000231BE /* Formatters */,
 				53DAFE762896C26200F9E069 /* Services */,
 				53DAFE6C2896C22C00F9E069 /* Assets.xcassets */,
 				53DAFE6E2896C22C00F9E069 /* Preview Content */,
@@ -104,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				53DAFE7B28970EF700F9E069 /* MKCoordinateRegion+Extensions.swift */,
+				536FFB1928C40077000231BE /* Measurement+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -111,6 +126,7 @@
 		53DAFE7F28971EA900F9E069 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				536FFB1328C3DD9A000231BE /* DistanceUnit.swift */,
 				53DAFE8028971ED500F9E069 /* Landmark.swift */,
 			);
 			path = Models;
@@ -121,6 +137,7 @@
 			children = (
 				53DAFE6A2896C22700F9E069 /* ContentView.swift */,
 				53DAFE832897262A00F9E069 /* LandmarkListView.swift */,
+				536FFB1128C3DD5B000231BE /* PreferencesScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,7 +200,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				536FFAF628C37927000231BE /* Formatters in Resources */,
 				53DAFE702896C22C00F9E069 /* Preview Assets.xcassets in Resources */,
 				53DAFE6D2896C22C00F9E069 /* Assets.xcassets in Resources */,
 			);
@@ -198,11 +214,15 @@
 			files = (
 				53DAFE6B2896C22700F9E069 /* ContentView.swift in Sources */,
 				53DAFE7C28970EF700F9E069 /* MKCoordinateRegion+Extensions.swift in Sources */,
+				536FFB1428C3DD9A000231BE /* DistanceUnit.swift in Sources */,
 				53DAFE7E28971AF700F9E069 /* LocalSearchService.swift in Sources */,
 				53DAFE692896C22700F9E069 /* POIRouterApp.swift in Sources */,
+				536FFB1228C3DD5B000231BE /* PreferencesScreen.swift in Sources */,
 				53DAFE792896C31800F9E069 /* LocationManager.swift in Sources */,
 				53DAFE842897262A00F9E069 /* LandmarkListView.swift in Sources */,
+				536FFB1A28C40077000231BE /* Measurement+Extensions.swift in Sources */,
 				53DAFE8128971ED500F9E069 /* Landmark.swift in Sources */,
+				536FFB1628C3FB11000231BE /* DistanceFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,7 +4,7 @@
 //
 //  Created by Joseph Jung on 7/31/22.
 //
-
+import Foundation
 import SwiftUI
 import MapKit
 
@@ -12,7 +12,22 @@ struct LandmarkListView: View {
     
     @EnvironmentObject var localSearchService: LocalSearchService
     @Binding var showLandmarksSheet: Bool
+    @AppStorage("distanceUnit") var distanceUnit: DistanceUnit = .miles
+//    @StateObject private var locationManager = LocationManager()
+    @StateObject private var locationManager = LocationManager()
     
+    var distanceFormatter = DistanceFormatter()
+
+    func formatDistance(for place: Landmark ) -> String {
+        
+        print("location  \(String(describing: locationManager.location))")
+
+        
+//        let userLocation =  CLLocation(latitude: 35.084385, longitude: -106.650421)
+        guard let distanceInMeters = place.getDistance(userLocation: locationManager.location) else {return ""}
+                distanceFormatter.unitOptions = distanceUnit
+                return distanceFormatter.format(distanceInMeters: distanceInMeters)
+    }
     var body: some View {
         VStack{
             List(localSearchService.landmarks) {landmark in
@@ -20,6 +35,10 @@ struct LandmarkListView: View {
                     Text(landmark.name)
                     Text(landmark.title)
                         .opacity(0.5)
+                    Text(formatDistance(for: landmark))
+                        .font(.caption)
+                        .opacity(0.5)
+                    
                 }
                 .listRowBackground(localSearchService.landmark == landmark ?
                                    Color(UIColor.lightGray): Color.white)

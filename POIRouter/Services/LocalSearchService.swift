@@ -29,6 +29,7 @@ class LocalSearchService: ObservableObject {
         request.region = locationManager.region
         
         let search = MKLocalSearch(request: request)
+        
         search.start { response, error in
             if let response = response {
                 let mapItems = response.mapItems

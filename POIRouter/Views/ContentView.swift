@@ -64,7 +64,8 @@ struct ContentView: View {
             Map(coordinateRegion: $localSearchService.region, showsUserLocation: true, annotationItems: localSearchService.landmarks) { landmark in
                 
                 MapAnnotation(coordinate: landmark.coordinate){
-                    Image(systemName: "heart.fill")
+//                    Image(systemName: "heart.fill")
+                    Image(systemName: "mappin.and.ellipse")
                         .foregroundColor(localSearchService.landmark == landmark ? .purple:.red)
                         .scaleEffect(localSearchService.landmark == landmark ? 2: 1)
                 }

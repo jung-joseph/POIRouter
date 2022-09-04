@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct SwiftUIMapApp: App {
+struct POIRouterApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView().environmentObject(LocalSearchService())
