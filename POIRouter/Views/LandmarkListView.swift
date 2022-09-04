@@ -13,7 +13,6 @@ struct LandmarkListView: View {
     @EnvironmentObject var localSearchService: LocalSearchService
     @Binding var showLandmarksSheet: Bool
     @AppStorage("distanceUnit") var distanceUnit: DistanceUnit = .miles
-//    @StateObject private var locationManager = LocationManager()
     @StateObject private var locationManager = LocationManager()
     
     var distanceFormatter = DistanceFormatter()
@@ -22,7 +21,7 @@ struct LandmarkListView: View {
         
         print("location  \(String(describing: locationManager.location))")
 
-        
+// Albuquerque:
 //        let userLocation =  CLLocation(latitude: 35.084385, longitude: -106.650421)
         guard let distanceInMeters = place.getDistance(userLocation: locationManager.location) else {return ""}
                 distanceFormatter.unitOptions = distanceUnit
