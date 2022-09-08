@@ -23,6 +23,9 @@ struct LandmarkListView: View {
 
 // Albuquerque:
 //        let userLocation =  CLLocation(latitude: 35.084385, longitude: -106.650421)
+        
+// Akron:
+//        let userLocation =  CLLocation(latitude: 41.0814, longitude: -81.5190)
         guard let distanceInMeters = place.getDistance(userLocation: locationManager.location) else {return ""}
                 distanceFormatter.unitOptions = distanceUnit
                 return distanceFormatter.format(distanceInMeters: distanceInMeters)
@@ -43,8 +46,10 @@ struct LandmarkListView: View {
                                    Color(UIColor.lightGray): Color.white)
                 .onTapGesture {
                     localSearchService.landmark = landmark
-                    withAnimation {
+                    withAnimation(.linear(duration: 15))
+                    {
                         localSearchService.region = MKCoordinateRegion.regionFromLandmark(landmark)
+                            
                     }
                     showLandmarksSheet.toggle()
                 }

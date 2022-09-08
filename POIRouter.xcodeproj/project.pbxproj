@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53030B0728CA1540006E9755 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53030B0628CA1540006E9755 /* UserSettings.swift */; };
 		536FFB1228C3DD5B000231BE /* PreferencesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536FFB1128C3DD5B000231BE /* PreferencesScreen.swift */; };
 		536FFB1428C3DD9A000231BE /* DistanceUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536FFB1328C3DD9A000231BE /* DistanceUnit.swift */; };
 		536FFB1628C3FB11000231BE /* DistanceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536FFB1528C3FB11000231BE /* DistanceFormatter.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53030B0628CA1540006E9755 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		536FFB1128C3DD5B000231BE /* PreferencesScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesScreen.swift; sourceTree = "<group>"; };
 		536FFB1328C3DD9A000231BE /* DistanceUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceUnit.swift; sourceTree = "<group>"; };
 		536FFB1528C3FB11000231BE /* DistanceFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceFormatter.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			children = (
 				536FFB1328C3DD9A000231BE /* DistanceUnit.swift */,
 				53DAFE8028971ED500F9E069 /* Landmark.swift */,
+				53030B0628CA1540006E9755 /* UserSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53DAFE6B2896C22700F9E069 /* ContentView.swift in Sources */,
+				53030B0728CA1540006E9755 /* UserSettings.swift in Sources */,
 				53DAFE7C28970EF700F9E069 /* MKCoordinateRegion+Extensions.swift in Sources */,
 				536FFB1428C3DD9A000231BE /* DistanceUnit.swift in Sources */,
 				53DAFE7E28971AF700F9E069 /* LocalSearchService.swift in Sources */,
