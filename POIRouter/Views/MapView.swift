@@ -25,6 +25,7 @@ struct MapView: UIViewRepresentable {
         let map = MKMapView()
         map.showsUserLocation = true
         map.delegate = context.coordinator
+        map.mapType = .hybrid
         return map
     }
     

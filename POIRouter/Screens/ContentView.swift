@@ -11,19 +11,19 @@ import MapKit
 import Foundation
 
 struct ContentView: View {
-   
+    
     @State private var search: String = ""
-//    @State private var showLandmarksSheet = false
-    @State private var showSearchResultsList = false
+    //    @State private var showLandmarksSheet = false
+    @State  private var showSearchResultsList = false
     @EnvironmentObject var userSettings: UserSettings
     
     @EnvironmentObject var searchVM: SearchResultsViewModel
-
-    @EnvironmentObject var appState: AppState
-
- 
     
-  
+    @EnvironmentObject var appState: AppState
+    
+    
+    
+    
     
     //
     init() {
@@ -39,32 +39,33 @@ struct ContentView: View {
                 TextField("Search", text: $search)
                     .textFieldStyle(.roundedBorder)
                     .onSubmit {
-
+                        
                         DispatchQueue.main.async {
-                           
+                            
                             searchVM.search(query: search) {   landmarks in
                                 appState.landmarks = landmarks
                             }
                         }
-                            
-//                        showSearchResultsList.toggle()
-//                        showLandmarksSheet.toggle()
+                        
+                        showSearchResultsList.toggle()
+                        
                     }.padding()
-
+                    .sheet(isPresented: $showSearchResultsList) {
+                        SearchResultsList(landmarks: appState.landmarks, showSearchResultsList: $showSearchResultsList) { landmark in
+                            appState.selectedLandmark = landmark
+                        }
+                        .presentationDetents([.large, .medium, .fraction(0.75)])
+    
+                    }
                 
-                SearchResultsList(landmarks: appState.landmarks) {landmark in
-                    appState.selectedLandmark = landmark
-                   
-                }
-                
-//                MapView(annotations: appState.landmarks,selectedLandmark: appState.selectedLandmark)
+                //                MapView(annotations: appState.landmarks,selectedLandmark: appState.selectedLandmark)
                 MapScreen()
                 
                 Spacer()
                 
             } // VStack
             //            .edgesIgnoringSafeArea(.all)
-           
+            
             .navigationBarTitle("POIRouter")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
