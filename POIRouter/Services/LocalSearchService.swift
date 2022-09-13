@@ -22,7 +22,7 @@ class LocalSearchService: ObservableObject {
             .store(in: &cancellables)
     }
     
-    func search(query: String) {
+    func search(query: String, completion: @escaping ([LandmarkAnnotation]) -> Void) {
         
         let request = MKLocalSearch.Request()
         request.naturalLanguageQuery = query
@@ -31,12 +31,19 @@ class LocalSearchService: ObservableObject {
         let search = MKLocalSearch(request: request)
         
         search.start { response, error in
-            if let response = response {
-                let mapItems = response.mapItems
-                self.landmarks = mapItems.map {
-                    Landmark(placemark: $0.placemark)
-                }
+            
+            guard let response = response, error == nil else {
+                print("Error: \(error?.localizedDescription ?? "Unknown error")")
+                
+                return
             }
+            
+//                let mapItems = response.mapItems
+//                self.landmarks = mapItems.map {
+//                    Landmark(placemark: $0.placemark)
+            let landmarks = response.mapItems.map(LandmarkAnnotation.init)
+            completion(landmarks)
+            
             
         }
         

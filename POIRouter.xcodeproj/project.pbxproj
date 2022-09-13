@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		53030B0728CA1540006E9755 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53030B0628CA1540006E9755 /* UserSettings.swift */; };
+		53030B0928CA8856006E9755 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53030B0828CA8856006E9755 /* MapView.swift */; };
+		53030B1028CA8DA8006E9755 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53030B0F28CA8DA8006E9755 /* MapKit.framework */; };
+		53030B1328CA8EEE006E9755 /* MapViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53030B1228CA8EEE006E9755 /* MapViewCoordinator.swift */; };
+		53030B1628CAA017006E9755 /* LandmarkAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53030B1528CAA017006E9755 /* LandmarkAnnotation.swift */; };
+		53030B1B28CAA601006E9755 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53030B1A28CAA601006E9755 /* AppState.swift */; };
+		53030B1E28CAA704006E9755 /* SearchResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53030B1D28CAA704006E9755 /* SearchResultsViewModel.swift */; };
+		53030B2228CB8645006E9755 /* SearchResultsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53030B2128CB8645006E9755 /* SearchResultsList.swift */; };
+		53030B2428CE9094006E9755 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53030B2328CE9094006E9755 /* DispatchQueue+Extension.swift */; };
+		53030B2828CE93E6006E9755 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53030B2728CE93E6006E9755 /* Log.swift */; };
+		536FA29C28CF98C100331905 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536FA29B28CF98C100331905 /* MapScreen.swift */; };
+		536FA29F28CFA16600331905 /* LandmarkCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536FA29E28CFA16600331905 /* LandmarkCalloutView.swift */; };
 		536FFB1228C3DD5B000231BE /* PreferencesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536FFB1128C3DD5B000231BE /* PreferencesScreen.swift */; };
 		536FFB1428C3DD9A000231BE /* DistanceUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536FFB1328C3DD9A000231BE /* DistanceUnit.swift */; };
 		536FFB1628C3FB11000231BE /* DistanceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536FFB1528C3FB11000231BE /* DistanceFormatter.swift */; };
@@ -20,11 +31,22 @@
 		53DAFE7C28970EF700F9E069 /* MKCoordinateRegion+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DAFE7B28970EF700F9E069 /* MKCoordinateRegion+Extensions.swift */; };
 		53DAFE7E28971AF700F9E069 /* LocalSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DAFE7D28971AF700F9E069 /* LocalSearchService.swift */; };
 		53DAFE8128971ED500F9E069 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DAFE8028971ED500F9E069 /* Landmark.swift */; };
-		53DAFE842897262A00F9E069 /* LandmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DAFE832897262A00F9E069 /* LandmarkListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		53030B0628CA1540006E9755 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		53030B0828CA8856006E9755 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		53030B0D28CA8DA8006E9755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		53030B0F28CA8DA8006E9755 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		53030B1228CA8EEE006E9755 /* MapViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCoordinator.swift; sourceTree = "<group>"; };
+		53030B1528CAA017006E9755 /* LandmarkAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkAnnotation.swift; sourceTree = "<group>"; };
+		53030B1A28CAA601006E9755 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		53030B1D28CAA704006E9755 /* SearchResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewModel.swift; sourceTree = "<group>"; };
+		53030B2128CB8645006E9755 /* SearchResultsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsList.swift; sourceTree = "<group>"; };
+		53030B2328CE9094006E9755 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
+		53030B2728CE93E6006E9755 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		536FA29B28CF98C100331905 /* MapScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
+		536FA29E28CFA16600331905 /* LandmarkCalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkCalloutView.swift; sourceTree = "<group>"; };
 		536FFB1128C3DD5B000231BE /* PreferencesScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesScreen.swift; sourceTree = "<group>"; };
 		536FFB1328C3DD9A000231BE /* DistanceUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceUnit.swift; sourceTree = "<group>"; };
 		536FFB1528C3FB11000231BE /* DistanceFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceFormatter.swift; sourceTree = "<group>"; };
@@ -38,7 +60,6 @@
 		53DAFE7B28970EF700F9E069 /* MKCoordinateRegion+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Extensions.swift"; sourceTree = "<group>"; };
 		53DAFE7D28971AF700F9E069 /* LocalSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSearchService.swift; sourceTree = "<group>"; };
 		53DAFE8028971ED500F9E069 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
-		53DAFE832897262A00F9E069 /* LandmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,12 +67,71 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53030B1028CA8DA8006E9755 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53030B0A28CA8B23006E9755 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				53DAFE6A2896C22700F9E069 /* ContentView.swift */,
+				536FFB1128C3DD5B000231BE /* PreferencesScreen.swift */,
+				536FA29B28CF98C100331905 /* MapScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		53030B0E28CA8DA8006E9755 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53030B0F28CA8DA8006E9755 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53030B1128CA8EBC006E9755 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				53030B1228CA8EEE006E9755 /* MapViewCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		53030B1428CA9FDC006E9755 /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				53030B1528CAA017006E9755 /* LandmarkAnnotation.swift */,
+			);
+			path = Annotations;
+			sourceTree = "<group>";
+		};
+		53030B1728CAA5BC006E9755 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				53030B1A28CAA601006E9755 /* AppState.swift */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		53030B1C28CAA6DF006E9755 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				53030B1D28CAA704006E9755 /* SearchResultsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		536FA29D28CFA10C00331905 /* Callouts */ = {
+			isa = PBXGroup;
+			children = (
+				536FA29E28CFA16600331905 /* LandmarkCalloutView.swift */,
+			);
+			path = Callouts;
+			sourceTree = "<group>";
+		};
 		536FFB1728C3FB34000231BE /* Formatters */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +145,7 @@
 			children = (
 				53DAFE672896C22700F9E069 /* POIRouter */,
 				53DAFE662896C22700F9E069 /* Products */,
+				53030B0E28CA8DA8006E9755 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,7 +160,13 @@
 		53DAFE672896C22700F9E069 /* POIRouter */ = {
 			isa = PBXGroup;
 			children = (
+				53030B0D28CA8DA8006E9755 /* Info.plist */,
 				53DAFE682896C22700F9E069 /* POIRouterApp.swift */,
+				53030B1728CAA5BC006E9755 /* Global */,
+				53030B1428CA9FDC006E9755 /* Annotations */,
+				53030B1C28CAA6DF006E9755 /* ViewModels */,
+				53030B0A28CA8B23006E9755 /* Screens */,
+				53030B1128CA8EBC006E9755 /* Coordinators */,
 				53DAFE822897260A00F9E069 /* Views */,
 				53DAFE7F28971EA900F9E069 /* Models */,
 				53DAFE7A28970E8800F9E069 /* Extensions */,
@@ -121,6 +208,8 @@
 			children = (
 				53DAFE7B28970EF700F9E069 /* MKCoordinateRegion+Extensions.swift */,
 				536FFB1928C40077000231BE /* Measurement+Extensions.swift */,
+				53030B2328CE9094006E9755 /* DispatchQueue+Extension.swift */,
+				53030B2728CE93E6006E9755 /* Log.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -138,9 +227,9 @@
 		53DAFE822897260A00F9E069 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				53DAFE6A2896C22700F9E069 /* ContentView.swift */,
-				53DAFE832897262A00F9E069 /* LandmarkListView.swift */,
-				536FFB1128C3DD5B000231BE /* PreferencesScreen.swift */,
+				536FA29D28CFA10C00331905 /* Callouts */,
+				53030B0828CA8856006E9755 /* MapView.swift */,
+				53030B2128CB8645006E9755 /* SearchResultsList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -216,14 +305,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				53DAFE6B2896C22700F9E069 /* ContentView.swift in Sources */,
+				53030B2428CE9094006E9755 /* DispatchQueue+Extension.swift in Sources */,
 				53030B0728CA1540006E9755 /* UserSettings.swift in Sources */,
+				536FA29C28CF98C100331905 /* MapScreen.swift in Sources */,
 				53DAFE7C28970EF700F9E069 /* MKCoordinateRegion+Extensions.swift in Sources */,
+				536FA29F28CFA16600331905 /* LandmarkCalloutView.swift in Sources */,
 				536FFB1428C3DD9A000231BE /* DistanceUnit.swift in Sources */,
+				53030B1328CA8EEE006E9755 /* MapViewCoordinator.swift in Sources */,
+				53030B0928CA8856006E9755 /* MapView.swift in Sources */,
+				53030B1B28CAA601006E9755 /* AppState.swift in Sources */,
+				53030B2828CE93E6006E9755 /* Log.swift in Sources */,
 				53DAFE7E28971AF700F9E069 /* LocalSearchService.swift in Sources */,
+				53030B2228CB8645006E9755 /* SearchResultsList.swift in Sources */,
 				53DAFE692896C22700F9E069 /* POIRouterApp.swift in Sources */,
+				53030B1628CAA017006E9755 /* LandmarkAnnotation.swift in Sources */,
 				536FFB1228C3DD5B000231BE /* PreferencesScreen.swift in Sources */,
+				53030B1E28CAA704006E9755 /* SearchResultsViewModel.swift in Sources */,
 				53DAFE792896C31800F9E069 /* LocationManager.swift in Sources */,
-				53DAFE842897262A00F9E069 /* LandmarkListView.swift in Sources */,
 				536FFB1A28C40077000231BE /* Measurement+Extensions.swift in Sources */,
 				53DAFE8128971ED500F9E069 /* Landmark.swift in Sources */,
 				536FFB1628C3FB11000231BE /* DistanceFormatter.swift in Sources */,
@@ -358,6 +456,8 @@
 				DEVELOPMENT_TEAM = 8GFL38QM4Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = POIRouter/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app requires your location";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -390,6 +490,8 @@
 				DEVELOPMENT_TEAM = 8GFL38QM4Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = POIRouter/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app requires your location";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

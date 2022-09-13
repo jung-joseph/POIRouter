@@ -10,13 +10,21 @@ import SwiftUI
 @main
 struct POIRouterApp: App {
     @StateObject var userSettings = UserSettings()
-    
+    @StateObject var appState = AppState()
+    @StateObject var searchVM = SearchResultsViewModel()
+    @StateObject var localSearchService = LocalSearchService()
     var body: some Scene {
+        
         WindowGroup {
-            //            let appState = AppState()
-            ContentView(userSettings: userSettings)
-                .environmentObject(LocalSearchService())
+            
+            ContentView()
+                .environmentObject(appState)
+                .environmentObject(searchVM)
+                .environmentObject(userSettings)
+                .environmentObject(localSearchService)
                 .preferredColorScheme(userSettings.isDarkMode ? .dark : .light)
+
+
             
         }
     }

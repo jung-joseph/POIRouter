@@ -12,7 +12,8 @@ import MapKit
 class LocationManager: NSObject, ObservableObject {
     
     let locationManager = CLLocationManager()
-    @Published var region = MKCoordinateRegion.defaultRegion()
+//    @Published var region = MKCoordinateRegion.defaultRegion()
+    @Published var region = MKCoordinateRegion()
     @Published var location: CLLocation?
     
     
