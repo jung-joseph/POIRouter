@@ -22,7 +22,11 @@ class LandmarkAnnotation: NSObject, MKAnnotation, Identifiable, ObservableObject
         mapItem.name
     }
     
-    var address: String {
+    var phone: String? {
+        mapItem.phoneNumber ?? ""
+    }
+    
+    var address: String? {
         guard let postalAddress = mapItem.placemark.postalAddress else {
             return ""
         }

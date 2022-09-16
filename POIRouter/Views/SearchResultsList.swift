@@ -43,8 +43,13 @@ struct SearchResultsList: View {
                 VStack(alignment: .leading) {
                     Text(landmark.title ?? "")
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    Text(landmark.city)
+                 
+                    Text(landmark.address ?? "")
                         .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Text(landmark.phone ?? "")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
                     Text(formatDistance(for:landmark))
                         .font(.caption)
                         .opacity(0.4)
@@ -60,7 +65,9 @@ struct SearchResultsList: View {
                 
             }// List
         }
+       
     }
+        
 }
 
 struct SearchResultsList_Previews: PreviewProvider {

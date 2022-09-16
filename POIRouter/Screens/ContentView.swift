@@ -35,7 +35,7 @@ struct ContentView: View {
         NavigationView{
             
             VStack(){
-                
+
                 TextField("Search", text: $search)
                     .textFieldStyle(.roundedBorder)
                     .onSubmit {
@@ -64,7 +64,7 @@ struct ContentView: View {
                 Spacer()
                 
             } // VStack
-            //            .edgesIgnoringSafeArea(.all)
+//                        .edgesIgnoringSafeArea(.all)
             
             .navigationBarTitle("POIRouter")
             .toolbar {
