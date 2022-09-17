@@ -25,7 +25,7 @@ final class MapViewCoordinator: NSObject, MKMapViewDelegate {
             return
         }
         
-        
+        print("in Did Select \(String(describing: annotation.title))")
 
         view.canShowCallout = true
         
@@ -86,23 +86,42 @@ final class MapViewCoordinator: NSObject, MKMapViewDelegate {
 
 //        let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "customMapAnnotation") as? MKMarkerAnnotationView ?? MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "customMapAnnotation")
         
+        // add MKPointAnnotation to allow for subtitle
+//        let pointAnnotation = MKPointAnnotation()
+//        pointAnnotation.coordinate = annotation.coordinate
+//        pointAnnotation.title = "title"
+//        pointAnnotation.subtitle = "subTitle"
+//        mapView.addAnnotation(pointAnnotation)
+        
+        
+        
+        
         guard let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: (mapPlace!)) else {
             return nil
             }
-        
-        
-//        annotationView.glyphText = "⛳️"
-//        annotationView.detailCalloutAccessoryView = UIImage(named: GG).map(UIImageView.init)
-//        annotationView.detailCalloutAccessoryView = UIImage(systemName: "pencil.and.outline").map(UIImageView.init)
 
-        let rightButton = UIButton(type: .detailDisclosure)
+        
+        
+ 
+
+
+        annotationView.isEnabled = true
+        annotationView.canShowCallout = true
+//        let rightButton = UIButton(type: .detailDisclosure)
+        let rightButton = UIButton(type: .contactAdd)
+
         annotationView.rightCalloutAccessoryView = rightButton
-       
         
         
         return annotationView
     }
     
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
+        guard let name = view.annotation else {return}
+//        let name = view.annotation
+        print("Callout \(String(describing: name.title)) tapped")
+    }
     
     func calculateRoute(start: MKMapItem, destination: MKMapItem, completion: @escaping (MKRoute?) -> Void) {
         let directionsRequest = MKDirections.Request()
