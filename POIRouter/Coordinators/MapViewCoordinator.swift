@@ -101,7 +101,7 @@ final class MapViewCoordinator: NSObject, MKMapViewDelegate {
             }
 
         
-//Mark: - comment
+
         
  
 
@@ -116,19 +116,56 @@ final class MapViewCoordinator: NSObject, MKMapViewDelegate {
         
         return annotationView
     }
-    
+//MARK: - CALLOUT FUNCTION
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
         guard let name = view.annotation else {return}
 //        let name = view.annotation
         print("Callout \(String(describing: name.title)) tapped")
+        
+        let currentPlaceCoordinate = (view.annotation?.coordinate)!
+        
+        let start = MKMapItem.forCurrentLocation()
+        let destination = MKMapItem(placemark: MKPlacemark(coordinate: currentPlaceCoordinate))
+        
+        self.calculateRoute(start: start, destination: destination) {route in
+            if let route = route {
+                
+                view.detailCalloutAccessoryView = nil
+                
+                let controller = RouteContentViewController(route: route)
+                let routePopover = RoutePopover(controller: controller)
+                
+                let positioningView = UIView(frame: CGRect(x: mapView.frame.width/2.6, y:0, width:
+                                                            mapView.frame.width/2, height: 0.0))
+//                    view.autoresizesSubviews = true
+
+                mapView.addSubview(positioningView)
+                
+                // clear all overlays
+                mapView.removeOverlays(mapView.overlays)
+                
+                // add overlay on the map
+                mapView.addOverlay(route.polyline, level: .aboveRoads)
+//                    routePopover.show(relativeTo: positioningView.frame, of: positioningView, preferredEdge: .minY)
+                
+                routePopover.show(routePopover, sender: self)
+                
+            }
+        }
+        
+        
+        
     }
+//MARK: - End Callout function
     
     func calculateRoute(start: MKMapItem, destination: MKMapItem, completion: @escaping (MKRoute?) -> Void) {
         let directionsRequest = MKDirections.Request()
         directionsRequest.transportType = .automobile
         directionsRequest.source = start
         directionsRequest.destination = destination
+        
+        print(" calculating route")
         
         let directions = MKDirections(request: directionsRequest)
         directions.calculate { response, error in
