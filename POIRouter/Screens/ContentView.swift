@@ -54,7 +54,7 @@ struct ContentView: View {
                         SearchResultsList(landmarks: appState.landmarks, showSearchResultsList: $showSearchResultsList) { landmark in
                             appState.selectedLandmark = landmark
                         }
-                        .presentationDetents([.large, .medium, .fraction(0.75)])
+                        .presentationDetents([.large, .medium, .fraction(0.75), .fraction(0.25)])
     
                     }
                 

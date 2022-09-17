@@ -22,6 +22,9 @@ class LandmarkAnnotation: NSObject, MKAnnotation, Identifiable, ObservableObject
         mapItem.name
     }
     
+    var subtitle: String? = "subtitle"
+    
+    
     var phone: String? {
         mapItem.phoneNumber ?? ""
     }

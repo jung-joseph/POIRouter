@@ -8,6 +8,7 @@
 import Foundation
 import MapKit
 import SwiftUI
+import UIKit
 
 struct MapView: UIViewRepresentable {
     
@@ -36,6 +37,10 @@ struct MapView: UIViewRepresentable {
         // reset selectedLandmark
 //        map.deselectAnnotation(selectedLandmark, animated: true)
         
+        
+        // register annotations
+        registerMapAnnotations(map: map)
+        
         // add annotations
         map.addAnnotations(annotations)
         
@@ -45,6 +50,16 @@ struct MapView: UIViewRepresentable {
         
         //update region
       
+    }
+    
+    private func registerMapAnnotations(map: MKMapView) {
+        print("registering  \(annotations.count) annotations")
+        
+        for annotation in annotations {
+            map.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: annotation.title ?? "")
+        }
+
+        
     }
     
     func makeCoordinator() -> MapViewCoordinator {

@@ -17,12 +17,16 @@ final class MapViewCoordinator: NSObject, MKMapViewDelegate {
         mapView.setRegion(region, animated: true)
     }
     
+
+    
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView){
         
         guard let annotation = view.annotation as? LandmarkAnnotation else {
             return
         }
         
+        
+
         view.canShowCallout = true
         
         
@@ -70,22 +74,36 @@ final class MapViewCoordinator: NSObject, MKMapViewDelegate {
         return renderer
     }
     
+  ////
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
-        guard let mapPlace = annotation as? LandmarkAnnotation else {return nil}
         
-        let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "customMapAnnotation") as? MKMarkerAnnotationView ?? MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "customMapAnnotation")
+//        guard let mapPlace = annotation.title as? LandmarkAnnotation else {return nil}
+
+        guard let mapPlace = annotation.title else {return nil}
+        
+        print("mapPlace \(String(describing: mapPlace))")
+
+//        let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "customMapAnnotation") as? MKMarkerAnnotationView ?? MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "customMapAnnotation")
+        
+        guard let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: (mapPlace!)) else {
+            return nil
+            }
         
         
-        annotationView.canShowCallout = true
 //        annotationView.glyphText = "⛳️"
 //        annotationView.detailCalloutAccessoryView = UIImage(named: GG).map(UIImageView.init)
-        annotationView.detailCalloutAccessoryView = UIImage(systemName: "pencil.and.outline").map(UIImageView.init)
+//        annotationView.detailCalloutAccessoryView = UIImage(systemName: "pencil.and.outline").map(UIImageView.init)
 
-        print("mapPlace \(String(describing: mapPlace.address))")
+        let rightButton = UIButton(type: .detailDisclosure)
+        annotationView.rightCalloutAccessoryView = rightButton
+       
+        
         
         return annotationView
     }
+    
+    
     func calculateRoute(start: MKMapItem, destination: MKMapItem, completion: @escaping (MKRoute?) -> Void) {
         let directionsRequest = MKDirections.Request()
         directionsRequest.transportType = .automobile

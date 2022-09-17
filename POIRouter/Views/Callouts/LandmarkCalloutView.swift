@@ -28,10 +28,17 @@ class LandmarkCalloutView: UIView {
    
     
     lazy var phoneTextField: UITextField = {
+        
         let phoneTextField = UITextField(frame: CGRect(x: 0, y: 0, width: 100, height: 60))
-        phoneTextField.text = "Phone \n \(annotation.phone)"
+        
+        if let phone = annotation.phone {
+            phoneTextField.text = "Phone \n \(phone)"
+        } else {
+            phoneTextField.text = ""
+        }
+        
         phoneTextField.allowsEditingTextAttributes = false
-//        phoneTextField.isBezeled = false
+        //        phoneTextField.isBezeled = false
         return phoneTextField
     }()
     

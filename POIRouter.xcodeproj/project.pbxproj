@@ -244,8 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				53030B0828CA8856006E9755 /* MapView.swift */,
-				536FA29D28CFA10C00331905 /* Callouts */,
 				53030B2128CB8645006E9755 /* SearchResultsList.swift */,
+				536FA29D28CFA10C00331905 /* Callouts */,
 				53CB6BE528D29B2D00EB4EC7 /* RoutePopover.swift */,
 			);
 			path = Views;
