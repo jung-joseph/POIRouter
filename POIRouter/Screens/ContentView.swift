@@ -45,9 +45,11 @@ struct ContentView: View {
                             searchVM.search(query: search) {   landmarks in
                                 appState.landmarks = landmarks
                             }
+                            
+                        
                         }
                         
-                        showSearchResultsList.toggle()
+                            showSearchResultsList = true
                         
                     }.padding()
                     .sheet(isPresented: $showSearchResultsList) {

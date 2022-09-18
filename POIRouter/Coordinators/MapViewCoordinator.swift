@@ -11,7 +11,6 @@ import UIKit
 
 final class MapViewCoordinator: NSObject, MKMapViewDelegate {
     
-    
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         let region = MKCoordinateRegion(center: mapView.userLocation.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
         mapView.setRegion(region, animated: true)
@@ -32,7 +31,9 @@ final class MapViewCoordinator: NSObject, MKMapViewDelegate {
         
 //        view.detail
         
-        view.detailCalloutAccessoryView = LandmarkCalloutView(annotation: annotation, selectShowDirections: { [weak self]
+//        view.detailCalloutAccessoryView = LandmarkCalloutView(annotation: annotation, selectShowDirections: { [weak self]
+        
+        let landmarkPopOverView = LandmarkCalloutView(annotation: annotation, selectShowDirections: { [weak self]
             place in
             
             let start = MKMapItem.forCurrentLocation()
@@ -41,7 +42,7 @@ final class MapViewCoordinator: NSObject, MKMapViewDelegate {
             self?.calculateRoute(start: start, destination: destination) {route in
                 if let route = route {
                     
-                    view.detailCalloutAccessoryView = nil
+//                    view.detailCalloutAccessoryView = nil
                     
                     let controller = RouteContentViewController(route: route)
                     let routePopover = RoutePopover(controller: controller)
@@ -82,7 +83,7 @@ final class MapViewCoordinator: NSObject, MKMapViewDelegate {
 
         guard let mapPlace = annotation.title else {return nil}
         
-        print("mapPlace \(String(describing: mapPlace))")
+//        print("mapPlace \(String(describing: mapPlace))")
 
 //        let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "customMapAnnotation") as? MKMarkerAnnotationView ?? MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "customMapAnnotation")
         
@@ -117,11 +118,17 @@ final class MapViewCoordinator: NSObject, MKMapViewDelegate {
         return annotationView
     }
 //MARK: - CALLOUT FUNCTION
+    
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
+       
         guard let name = view.annotation else {return}
 //        let name = view.annotation
         print("Callout \(String(describing: name.title)) tapped")
+        
+        
+//        let landmarkCalloutView = LandmarkCalloutView(annotation: name, selectShowDirections: <#T##(LandmarkAnnotation) -> Void#>)
+        
         
         let currentPlaceCoordinate = (view.annotation?.coordinate)!
         

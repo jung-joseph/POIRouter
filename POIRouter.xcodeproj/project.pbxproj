@@ -26,6 +26,7 @@
 		53CB6BE428D29AB600EB4EC7 /* RouteCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CB6BE328D29AB600EB4EC7 /* RouteCalloutView.swift */; };
 		53CB6BE628D29B2D00EB4EC7 /* RoutePopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CB6BE528D29B2D00EB4EC7 /* RoutePopover.swift */; };
 		53CB6BE928D2A20700EB4EC7 /* RouteContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CB6BE828D2A20700EB4EC7 /* RouteContentViewController.swift */; };
+		53D7289C28D79F70006E038D /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D7289B28D79F70006E038D /* PopOverViewController.swift */; };
 		53DAFE692896C22700F9E069 /* POIRouterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DAFE682896C22700F9E069 /* POIRouterApp.swift */; };
 		53DAFE6B2896C22700F9E069 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DAFE6A2896C22700F9E069 /* ContentView.swift */; };
 		53DAFE6D2896C22C00F9E069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53DAFE6C2896C22C00F9E069 /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		53CB6BE328D29AB600EB4EC7 /* RouteCalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCalloutView.swift; sourceTree = "<group>"; };
 		53CB6BE528D29B2D00EB4EC7 /* RoutePopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePopover.swift; sourceTree = "<group>"; };
 		53CB6BE828D2A20700EB4EC7 /* RouteContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteContentViewController.swift; sourceTree = "<group>"; };
+		53D7289B28D79F70006E038D /* PopOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverViewController.swift; sourceTree = "<group>"; };
 		53DAFE652896C22700F9E069 /* POIRouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POIRouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DAFE682896C22700F9E069 /* POIRouterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIRouterApp.swift; sourceTree = "<group>"; };
 		53DAFE6A2896C22700F9E069 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -151,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				53CB6BE828D2A20700EB4EC7 /* RouteContentViewController.swift */,
+				53CB6BE528D29B2D00EB4EC7 /* RoutePopover.swift */,
+				53D7289B28D79F70006E038D /* PopOverViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -246,7 +250,6 @@
 				53030B0828CA8856006E9755 /* MapView.swift */,
 				53030B2128CB8645006E9755 /* SearchResultsList.swift */,
 				536FA29D28CFA10C00331905 /* Callouts */,
-				53CB6BE528D29B2D00EB4EC7 /* RoutePopover.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				53030B1328CA8EEE006E9755 /* MapViewCoordinator.swift in Sources */,
 				53030B0928CA8856006E9755 /* MapView.swift in Sources */,
 				53CB6BE428D29AB600EB4EC7 /* RouteCalloutView.swift in Sources */,
+				53D7289C28D79F70006E038D /* PopOverViewController.swift in Sources */,
 				53030B1B28CAA601006E9755 /* AppState.swift in Sources */,
 				53030B2828CE93E6006E9755 /* Log.swift in Sources */,
 				53DAFE7E28971AF700F9E069 /* LocalSearchService.swift in Sources */,

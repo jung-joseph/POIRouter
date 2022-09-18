@@ -37,6 +37,11 @@ struct MapView: UIViewRepresentable {
         // reset selectedLandmark
 //        map.deselectAnnotation(selectedLandmark, animated: true)
         
+        if !map.overlays.isEmpty {
+            print("overlays is not Empty")
+            map.removeOverlays(map.overlays)
+
+        }
         
         // register annotations
         registerMapAnnotations(map: map)
