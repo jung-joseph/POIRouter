@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		53030B0728CA1540006E9755 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53030B0628CA1540006E9755 /* UserSettings.swift */; };
 		53030B0928CA8856006E9755 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53030B0828CA8856006E9755 /* MapView.swift */; };
 		53030B1028CA8DA8006E9755 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53030B0F28CA8DA8006E9755 /* MapKit.framework */; };
 		53030B1328CA8EEE006E9755 /* MapViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53030B1228CA8EEE006E9755 /* MapViewCoordinator.swift */; };
@@ -23,6 +22,7 @@
 		536FFB1428C3DD9A000231BE /* DistanceUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536FFB1328C3DD9A000231BE /* DistanceUnit.swift */; };
 		536FFB1628C3FB11000231BE /* DistanceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536FFB1528C3FB11000231BE /* DistanceFormatter.swift */; };
 		536FFB1A28C40077000231BE /* Measurement+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 536FFB1928C40077000231BE /* Measurement+Extensions.swift */; };
+		53939302290C251500C21689 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53939301290C251500C21689 /* UserSettings.swift */; };
 		53CB6BE428D29AB600EB4EC7 /* RouteCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CB6BE328D29AB600EB4EC7 /* RouteCalloutView.swift */; };
 		53CB6BE628D29B2D00EB4EC7 /* RoutePopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CB6BE528D29B2D00EB4EC7 /* RoutePopover.swift */; };
 		53CB6BE928D2A20700EB4EC7 /* RouteContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53CB6BE828D2A20700EB4EC7 /* RouteContentViewController.swift */; };
@@ -38,7 +38,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		53030B0628CA1540006E9755 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		53030B0828CA8856006E9755 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		53030B0D28CA8DA8006E9755 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		53030B0F28CA8DA8006E9755 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -55,6 +54,7 @@
 		536FFB1328C3DD9A000231BE /* DistanceUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceUnit.swift; sourceTree = "<group>"; };
 		536FFB1528C3FB11000231BE /* DistanceFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceFormatter.swift; sourceTree = "<group>"; };
 		536FFB1928C40077000231BE /* Measurement+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Measurement+Extensions.swift"; sourceTree = "<group>"; };
+		53939301290C251500C21689 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		53CB6BE328D29AB600EB4EC7 /* RouteCalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCalloutView.swift; sourceTree = "<group>"; };
 		53CB6BE528D29B2D00EB4EC7 /* RoutePopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePopover.swift; sourceTree = "<group>"; };
 		53CB6BE828D2A20700EB4EC7 /* RouteContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteContentViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +195,7 @@
 				53DAFE762896C26200F9E069 /* Services */,
 				53DAFE6C2896C22C00F9E069 /* Assets.xcassets */,
 				53DAFE6E2896C22C00F9E069 /* Preview Content */,
+				53939301290C251500C21689 /* UserSettings.swift */,
 			);
 			path = POIRouter;
 			sourceTree = "<group>";
@@ -239,7 +240,6 @@
 			children = (
 				536FFB1328C3DD9A000231BE /* DistanceUnit.swift */,
 				53DAFE8028971ED500F9E069 /* Landmark.swift */,
-				53030B0628CA1540006E9755 /* UserSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -326,7 +326,6 @@
 			files = (
 				53DAFE6B2896C22700F9E069 /* ContentView.swift in Sources */,
 				53030B2428CE9094006E9755 /* DispatchQueue+Extension.swift in Sources */,
-				53030B0728CA1540006E9755 /* UserSettings.swift in Sources */,
 				536FA29C28CF98C100331905 /* MapScreen.swift in Sources */,
 				53CB6BE628D29B2D00EB4EC7 /* RoutePopover.swift in Sources */,
 				53DAFE7C28970EF700F9E069 /* MKCoordinateRegion+Extensions.swift in Sources */,
@@ -348,6 +347,7 @@
 				53DAFE792896C31800F9E069 /* LocationManager.swift in Sources */,
 				536FFB1A28C40077000231BE /* Measurement+Extensions.swift in Sources */,
 				53DAFE8128971ED500F9E069 /* Landmark.swift in Sources */,
+				53939302290C251500C21689 /* UserSettings.swift in Sources */,
 				536FFB1628C3FB11000231BE /* DistanceFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

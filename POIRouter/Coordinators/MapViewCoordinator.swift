@@ -109,7 +109,7 @@ final class MapViewCoordinator: NSObject, MKMapViewDelegate {
 
         annotationView.isEnabled = true
         annotationView.canShowCallout = true
-//        let rightButton = UIButton(type: .detailDisclosure)
+//        let rightButton = UIButton(type: .custom)
         let rightButton = UIButton(type: .contactAdd)
 
         annotationView.rightCalloutAccessoryView = rightButton
@@ -137,7 +137,11 @@ final class MapViewCoordinator: NSObject, MKMapViewDelegate {
         
         self.calculateRoute(start: start, destination: destination) {route in
             if let route = route {
-                
+                print("Calculating Route inside calloutAccessaryControlTapped")
+                print("start: \(start)")
+                print("coordinates: \(start.placemark.coordinate)")
+
+                print("destination: \(destination)")
                 view.detailCalloutAccessoryView = nil
                 
                 let controller = RouteContentViewController(route: route)
